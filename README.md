@@ -29,13 +29,15 @@ Write few funtions based on program to simulate organizing apps and folders that
 * Build app/folder by input.  
 
 ## **Requirement**  
-1. Add function `addNodes()` on `Node`.  
+1. Add function `addNodes()` and `accept()` on `Node`.  
 ```
 class Node{
 public:
     virtual void addNodes(std::list<Node*> nodes);
     // App: throw std::string "only folder can add nodes.".
     // Folder: add nodes into folder and update the path of the nodes.
+
+    virtual void accept(Visitor* visitor) = 0;
 }
 ```
 
