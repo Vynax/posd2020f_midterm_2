@@ -112,6 +112,10 @@ public:
     void buildFolderEnd() {
         // notify end of folder.
     }
+
+    std::deque<Node*> getResult() {
+        // return result.
+    }
 }
 ```
 6. Add class `NodeParser` in `node_parser.h`.  
