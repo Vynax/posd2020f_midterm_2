@@ -92,8 +92,8 @@ TEST(NodeBuilderTest, build_folder_contains_a_empty_folder) {
     NodeBuilder nb;
 
     nb.buildFolderBegin("community");
-    nb.buildFolderBegin("trash");
-    nb.buildFolderEnd();
+        nb.buildFolderBegin("trash");
+        nb.buildFolderEnd();
     nb.buildFolderEnd();
 
     std::deque<Node*> results = nb.getResult();
