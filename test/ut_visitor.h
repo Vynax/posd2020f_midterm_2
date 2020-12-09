@@ -16,19 +16,23 @@ protected:
         favorite_in_common = new Folder("6", "favorite");
 
         favorite->addNodes({
-            new App("7", "instagram", 20.21), community,
-            new App("8", "youtube", 70.07), common
+            new App("7", "instagram", 20.21),
+            community,
+            new App("8", "youtube", 70.07),
+            common
         });
 
         community->addNodes({
             new App("9", "facebook", 30.32),
             new App("10", "instagram", 20.21),
-            new Folder("11", "favorite"), others_in_community
+            new Folder("11", "favorite"),
+            others_in_community
         });
 
         common->addNodes({
             new App("12", "instagram", 20.21),
-            new App("13", "line", 60.66), favorite_in_common,
+            new App("13", "line", 60.66),
+            favorite_in_common,
             new App("14", "twitter", 40.05)
         });
 
