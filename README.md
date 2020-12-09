@@ -1,7 +1,7 @@
 # **Pattern Oriented Software Design 2020 Fall Midterm 2**  
 
 ## **Notice**  
-* **Exam time: 18:00 ~ 21:00, 2020/12/09**  
+* **Exam time: 18:00 ~ 22:00, 2020/12/09**  
 * **The reopsitory to upload test is same as assignment.**  
 * **If you use any website other than [Resources Allowed To Use](#resources-allowed-to-use), you'll get no point for this test.**  
 * **If you access others' ssl-gitlab, you'll get no point for the test.**  
@@ -11,7 +11,7 @@
 
 ## **Score**  
 * TA Unit Test On Jenkins: 100%  
-* Each TA Unit Test is allocated 1 to 5 points according to its difficulty level  
+* Each TA Unit Test is allocated 2 to 5 points according to its difficulty level  
 * Points will be deducted if you change given interface (for example, removing ```const```.)  
 
 ## **Resources Allowed To Use**  
@@ -84,15 +84,14 @@ public:
 }
 ```
 * Purpose of the scanner is to scan through the input and able to send out each token by nextToken().  
-* For input of `App` it should be in form of `${Node Name} (${Node Size})`. ex. gmail (21.45)  
-* For input of `Folder` it should be in form of `${Node Name} {}`. ex. favorite {} 
-* Each `Node` should be separate with `,`
-* There for nextToken() should only return `${Node Name}`, `${Node Size}`, `{`, `}`, `(`, `)`, `,` and ignore the remaining.  
-* `${Node Name}` composed only of letters.
-* `${Node Size}` is always a vaild double.
-
+* There for nextToken() should only return `Node_Name`, `Node_Size`, `{`, `}`, `(`, `)`, `,` and ignore the remaining.  
+* `Node_Name` should only build up with a~z, A~Z.   
+* `Node_Size` is always a vaild double.  
+* For input of `App` it should be in form of `Node_Name (Node_Size)`. ex. gmail (21.45)  
+* For input of `Folder` it should be in form of `Node_Name {}`. ex. favorite {} 
+* Each `Node` should be separate with `,`  
 * Ignore the token which is illegal. 
-* Example:
+* Example:  
 ```
     facebook #(%30.32!@) => facebook (30.32)
     ~!@favorite {^chrome(50.15)%, $facebook(*30.32)}# => favorite {chrome(50.15), facebook(30.32)}
@@ -137,7 +136,7 @@ public:
 }
 ```
 * Ignore the node with invalid argument.  
-* Example:
+* Example:  
 ```
     chrome (50.15, 51.05), facebook (), instagram (20.21) => build instagram (20.21) only.
 ```
